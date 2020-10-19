@@ -1,0 +1,25 @@
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  #lista-cor-favorita{
+    background-color: red;
+    line-height: 30px;
+  }  
+
+  p, ul{
+    background-color: green;
+  } 
+
+  .paragrafo{
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  body{
+    font-size: 16px;
+  }
