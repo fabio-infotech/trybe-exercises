@@ -256,4 +256,4 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 # [...]
 
-# Estrutura idealizada por https://www.linkedin.com/in/rafaelcostamoura/
+#Estrutura idealizada por https://www.linkedin.com/in/rafaelcostamoura/
