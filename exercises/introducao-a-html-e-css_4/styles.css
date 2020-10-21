@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   
-  h2, h3 {
+  h2, h3, h4 {
     margin: 0 0 20px;
   }
   
@@ -12,6 +12,10 @@
     margin-bottom: 5px;
   }
   
+  #nome_cientifico{
+    font-style: italic;
+  }
+
   .header {
     background-color: rgb(10, 126, 81);
     color: white;
