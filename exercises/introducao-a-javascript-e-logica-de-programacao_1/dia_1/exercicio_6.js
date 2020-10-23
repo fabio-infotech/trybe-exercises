@@ -1,25 +1,25 @@
-let peca = "torre"
+let peca = "bispo"
 
 switch(peca.toLowerCase()) {
+    case "rei":
+        console.log("Rei -> qualquer direção");
+        break;
+    case "rainha":
+        console.log("Rainha -> qualquer direção");
+        break; 
     case "torre":
         console.log("Torre -> vertical e horizontal");
         break;
+    case "cavalo":
+        console.log("Cavalo -> em L");
+        break;  
     case "bispo":
         console.log("Bispo -> diagonal");
-        break;
-    case "cavalo":
-        console.log("Cavalo -> L duas casa a frente uma para o lado");
-        break;
-    case "rainha":
-        console.log("Rainha -> Vertical, Horizontal e Diagonal");
-        break;
-    case "rei":
-        console.log("Rei -> Uma posição em qualquer direção");
-        break;
+        break;         
     case "peão":
-        console.log("Peão -> Sempre em frente, 2 casas se for primeiro movimento 2 caso contrário");
+        console.log("Peão -> frente");
         break;
     default:
-        console.log("Peça inválida!");
+        console.log("Peça inválida");
         break;
 } 
