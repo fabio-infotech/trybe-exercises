@@ -1,5 +1,6 @@
 let n = 5;
 let linhaAsteriscos;
+let linhaEspaco;
 
 for(let contador = 1; contador <= n; contador++)
 {
