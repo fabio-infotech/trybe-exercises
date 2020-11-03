@@ -68,4 +68,4 @@ function alteraCor(elementos, cor){
 };
 
 //alteraCor('.month-container', 'blue');
-alteraCor('#btn-holiday', 'blue');
+//alteraCor('#btn-holiday', 'blue');
