@@ -25,3 +25,8 @@ document.querySelector('.center-content').appendChild(p);
 div = document.createElement('div');
 div.className = 'left-content';
 document.querySelector('.main-container').appendChild(div);
+
+// Exercício 6
+div = document.createElement('div');
+div.className = 'right-content';
+document.querySelector('.main-container').appendChild(div);
