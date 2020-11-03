@@ -67,3 +67,7 @@ document.querySelector('h1').className = "title";
 document.querySelectorAll('h3')[0].className = "description";
 document.querySelectorAll('h3')[1].className = "description";
 document.querySelectorAll('h3')[2].className = "description";
+
+// Exercício 3 parte 2
+div = document.querySelector('.left-content');
+document.querySelector('.main-content').removeChild(div);
