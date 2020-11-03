@@ -54,9 +54,11 @@ for (let index = 0; index < numbersList.length; index += 1) {
 
 // Exercício 9
 let h3 = document.createElement('h3');
-//h3.innerHTML = 'Exercício 5.2 - JavaScript DOM';
 document.querySelector('.main-content').appendChild(h3);
 h3 = document.createElement('h3');
 document.querySelector('.main-content').appendChild(h3);
 h3 = document.createElement('h3');
 document.querySelector('.main-content').appendChild(h3);
+
+// Exercício 1 parte 2
+document.querySelector('h1').className = "title";
