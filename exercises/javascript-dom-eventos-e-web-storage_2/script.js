@@ -75,3 +75,7 @@ document.querySelector('.main-content').removeChild(div);
 // Exercício 4 parte 2
 div = document.querySelector('.right-content');
 div.style.marginRight = 'auto';
+
+// Exercício 5 parte 2
+div = document.querySelector('.center-content');
+div.parentNode.style.background = 'Green';
