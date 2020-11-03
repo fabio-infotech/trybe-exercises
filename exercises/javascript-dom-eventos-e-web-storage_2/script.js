@@ -15,3 +15,8 @@ document.body.appendChild(div);
 div = document.createElement('div');
 div.className = 'center-content';
 document.querySelector('.main-container').appendChild(div);
+
+// Exercício 4
+let p = document.createElement('p');
+p.innerHTML = 'Inclusão da tag p';
+document.querySelector('.center-content').appendChild(p);
