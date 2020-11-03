@@ -30,3 +30,9 @@ document.querySelector('.main-container').appendChild(div);
 div = document.createElement('div');
 div.className = 'right-content';
 document.querySelector('.main-container').appendChild(div);
+
+// Exercício 7
+let img = document.createElement('img');
+img.className = 'small-image';
+img.src = "https://picsum.photos/200";
+document.querySelector('.left-content').appendChild(img);
