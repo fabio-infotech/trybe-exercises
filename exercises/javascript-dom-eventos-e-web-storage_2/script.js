@@ -62,3 +62,8 @@ document.querySelector('.main-content').appendChild(h3);
 
 // Exercício 1 parte 2
 document.querySelector('h1').className = "title";
+
+// Exercício 2 parte 2
+document.querySelectorAll('h3')[0].className = "description";
+document.querySelectorAll('h3')[1].className = "description";
+document.querySelectorAll('h3')[2].className = "description";
