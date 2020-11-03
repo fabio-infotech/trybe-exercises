@@ -20,3 +20,8 @@ document.querySelector('.main-container').appendChild(div);
 let p = document.createElement('p');
 p.innerHTML = 'Inclusão da tag p';
 document.querySelector('.center-content').appendChild(p);
+
+// Exercício 5
+div = document.createElement('div');
+div.className = 'left-content';
+document.querySelector('.main-container').appendChild(div);
