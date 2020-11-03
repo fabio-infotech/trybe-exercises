@@ -36,3 +36,18 @@ let img = document.createElement('img');
 img.className = 'small-image';
 img.src = "https://picsum.photos/200";
 document.querySelector('.left-content').appendChild(img);
+
+// Exercício 8
+let ul = document.createElement('ul');
+document.querySelector('.right-content').appendChild(ul);
+
+let numbersList = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+let getNumbersList = document.querySelector('ul');
+
+for (let index = 0; index < numbersList.length; index += 1) {
+  let number = numbersList[index];
+  let numberItem = document.createElement('li');
+
+  numberItem.innerHTML = number;
+  getNumbersList.appendChild(numberItem);  
+}
