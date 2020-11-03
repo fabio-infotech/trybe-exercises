@@ -8,13 +8,13 @@ document.body.appendChild(h1);
 
 // Exercicio 2
 let div = document.createElement('div');
-div.className = 'main-container';
+div.className = 'main-content';
 document.body.appendChild(div);
 
 // Exercício 3
 div = document.createElement('div');
 div.className = 'center-content';
-document.querySelector('.main-container').appendChild(div);
+document.querySelector('.main-content').appendChild(div);
 
 // Exercício 4
 let p = document.createElement('p');
@@ -24,12 +24,12 @@ document.querySelector('.center-content').appendChild(p);
 // Exercício 5
 div = document.createElement('div');
 div.className = 'left-content';
-document.querySelector('.main-container').appendChild(div);
+document.querySelector('.main-content').appendChild(div);
 
 // Exercício 6
 div = document.createElement('div');
 div.className = 'right-content';
-document.querySelector('.main-container').appendChild(div);
+document.querySelector('.main-content').appendChild(div);
 
 // Exercício 7
 let img = document.createElement('img');
@@ -51,3 +51,12 @@ for (let index = 0; index < numbersList.length; index += 1) {
   numberItem.innerHTML = number;
   getNumbersList.appendChild(numberItem);  
 }
+
+// Exercício 9
+let h3 = document.createElement('h3');
+//h3.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+document.querySelector('.main-content').appendChild(h3);
+h3 = document.createElement('h3');
+document.querySelector('.main-content').appendChild(h3);
+h3 = document.createElement('h3');
+document.querySelector('.main-content').appendChild(h3);
