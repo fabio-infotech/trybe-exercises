@@ -79,3 +79,10 @@ div.style.marginRight = 'auto';
 // Exercício 5 parte 2
 div = document.querySelector('.center-content');
 div.parentNode.style.background = 'Green';
+
+// Exercício 6 parte 2
+ul = document.querySelector('ul');
+let lastElementList = ul.lastElementChild;
+ul.removeChild(lastElementList);
+lastElementList = ul.lastElementChild;
+ul.removeChild(lastElementList);
