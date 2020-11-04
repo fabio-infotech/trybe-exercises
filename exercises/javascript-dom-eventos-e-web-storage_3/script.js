@@ -82,3 +82,18 @@ function createNewButtonFriday(buttonName) {
 }
 
 createNewButtonFriday('Sexta-feira');
+
+// Exercício 5
+const fridayDays = [4, 11, 18, 25];
+const btnFriday = document.getElementById('btn-friday');
+
+btnFriday.addEventListener('click', function() {
+  const fridays = document.getElementsByClassName('friday');
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerHTML !== "SEXTOU!") {
+      fridays[index].innerHTML = "SEXTOU!";
+    } else {
+      fridays[index].innerHTML = fridayDays[index];
+    }
+  }
+});
