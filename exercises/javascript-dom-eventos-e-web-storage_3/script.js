@@ -63,10 +63,10 @@ let btnHoliday = document.getElementById('btn-holiday');
 btnHoliday.addEventListener('click', function() {
     const holidays = document.querySelectorAll('.holiday');
     for (let index = 0; index < holidays.length; index += 1) {
-      if (holidays[index].style.backgroundColor === 'green') {
+      if (holidays[index].style.backgroundColor === 'orange') {
         holidays[index].style.backgroundColor = 'rgb(238,238,238)';
       } else {
-        holidays[index].style.backgroundColor = 'green';
+        holidays[index].style.backgroundColor = 'orange';
       }
     }
   });
@@ -136,3 +136,17 @@ function createNewLegend(legendColor) {
 }
 
 createNewLegend('red');
+
+// Exercício 9
+const divTask = document.getElementById('task');
+
+divTask.addEventListener('click', selectTask);
+
+function selectTask() {
+    if (divTask.className == 'task') {
+        divTask.className = 'task selected';
+    }
+    else {
+        divTask.className = 'task';
+    }    
+}
