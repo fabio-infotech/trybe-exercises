@@ -44,3 +44,15 @@ for (let index = 0; index < daysList.length; index += 1) {
     getDaysList.appendChild(dayItem);
   }
 };
+
+// Exercício 2
+function criarBotaoFeriados(texto) {
+    let div = document.querySelector('.buttons-container');
+    let btnFeriados = document.createElement('button');
+
+    btnFeriados.id = 'btn-holiday';
+    btnFeriados.innerHTML = texto;
+    div.appendChild(btnFeriados);
+}
+
+criarBotaoFeriados('Feriados');
