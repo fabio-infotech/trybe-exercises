@@ -14,3 +14,33 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
   
 // Escreva seu código abaixo.
+
+// Exercício 1
+const daysList = [29, 30];
+for (index = 1; index <= 31; index += 1) {
+  daysList.push(index);
+};
+
+const getDaysList = document.querySelector('#days');
+
+for (let index = 0; index < daysList.length; index += 1) {
+  const day = daysList[index];
+  const dayItem = document.createElement('li');
+  if (day === 24 | day === 31) {
+    dayItem.className = 'day holiday';
+    dayItem.innerHTML = day;
+    getDaysList.appendChild(dayItem);
+  } else if (day === 4 | day === 11 | day === 18) {
+    dayItem.className = 'day friday';
+    dayItem.innerHTML = day;
+    getDaysList.appendChild(dayItem);
+  } else if (day === 25) {
+    dayItem.className = 'day holiday friday';
+    dayItem.innerHTML = day;
+    getDaysList.appendChild(dayItem);
+  } else {
+    dayItem.className = 'day';
+    dayItem.innerHTML = day;
+    getDaysList.appendChild(dayItem);
+  }
+};
