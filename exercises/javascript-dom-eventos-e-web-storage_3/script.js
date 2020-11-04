@@ -122,3 +122,17 @@ function createNewTask(taskName) {
 }
 
 createNewTask('Cozinhar');
+
+// Exercício 8
+function createNewLegend(legendColor) {
+    let div = document.querySelector('.my-tasks');
+    let divTask = document.createElement('div');
+    
+    divTask.id = 'task';
+    divTask.className = 'task';
+    divTask.style.backgroundColor = legendColor;
+
+    div.appendChild(divTask);
+}
+
+createNewLegend('red');
