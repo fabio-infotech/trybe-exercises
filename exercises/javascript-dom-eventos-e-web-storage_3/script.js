@@ -111,3 +111,14 @@ function aumentaFonte(event) {
 function diminuiFonte(event) {
     event.target.style.fontSize = 'medium';
 }
+
+// Exercício 7
+function createNewTask(taskName) {
+    let div = document.querySelector('.my-tasks');
+    let tagSpan = document.createElement('span');
+    
+    tagSpan.innerHTML = taskName;
+    div.appendChild(tagSpan);
+}
+
+createNewTask('Cozinhar');
