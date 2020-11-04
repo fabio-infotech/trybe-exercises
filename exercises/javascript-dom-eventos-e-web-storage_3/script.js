@@ -56,3 +56,17 @@ function criarBotaoFeriados(texto) {
 }
 
 criarBotaoFeriados('Feriados');
+
+// Exercício 3
+let btnFeriados = document.getElementById('btn-holiday');
+
+btnFeriados.addEventListener('click', function() {
+    const holidays = document.querySelectorAll('.holiday');
+    for (let index = 0; index < holidays.length; index += 1) {
+      if (holidays[index].style.backgroundColor === 'green') {
+        holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        holidays[index].style.backgroundColor = 'green';
+      }
+    }
+  });
