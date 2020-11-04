@@ -46,21 +46,21 @@ for (let index = 0; index < daysList.length; index += 1) {
 };
 
 // Exercício 2
-function criarBotaoFeriados(texto) {
+function createNewButtonHoliday(buttonName) {
     let div = document.querySelector('.buttons-container');
-    let btnFeriados = document.createElement('button');
+    let btnHoliday = document.createElement('button');
 
-    btnFeriados.id = 'btn-holiday';
-    btnFeriados.innerHTML = texto;
-    div.appendChild(btnFeriados);
+    btnHoliday.id = 'btn-holiday';
+    btnHoliday.innerHTML = buttonName;
+    div.appendChild(btnHoliday);
 }
 
-criarBotaoFeriados('Feriados');
+createNewButtonHoliday('Feriados');
 
 // Exercício 3
-let btnFeriados = document.getElementById('btn-holiday');
+let btnHoliday = document.getElementById('btn-holiday');
 
-btnFeriados.addEventListener('click', function() {
+btnHoliday.addEventListener('click', function() {
     const holidays = document.querySelectorAll('.holiday');
     for (let index = 0; index < holidays.length; index += 1) {
       if (holidays[index].style.backgroundColor === 'green') {
@@ -70,3 +70,15 @@ btnFeriados.addEventListener('click', function() {
       }
     }
   });
+
+// Exercício 4
+function createNewButtonFriday(buttonName) {
+    let div = document.querySelector('.buttons-container');
+    let btnFriday = document.createElement('button');
+
+    btnFriday.id = 'btn-friday';
+    btnFriday.innerHTML = buttonName;
+    div.appendChild(btnFriday);
+}
+
+createNewButtonFriday('Sexta-feira');
