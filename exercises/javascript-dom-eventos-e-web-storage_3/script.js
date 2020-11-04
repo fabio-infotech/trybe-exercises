@@ -97,3 +97,17 @@ btnFriday.addEventListener('click', function() {
     }
   }
 });
+
+// Exercício 6
+const ul = document.getElementById('days');
+
+ul.addEventListener('mousemove', aumentaFonte);
+ul.addEventListener('mouseout', diminuiFonte);
+
+function aumentaFonte(event) {
+    event.target.style.fontSize = 'xxx-large';
+}
+
+function diminuiFonte(event) {
+    event.target.style.fontSize = 'medium';
+}
