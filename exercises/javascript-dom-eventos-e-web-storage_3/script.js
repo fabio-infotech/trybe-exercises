@@ -162,3 +162,40 @@ function setLegendColor(event) {
         event.target.style.color = document.querySelector('.task-selected').style.backgroundColor;
     }
 }
+
+// Bonus
+const caixaTexto = document.getElementById('task-input');
+const btnAdicionar = document.getElementById('btn-add');
+
+caixaTexto.addEventListener('keyup', checkEnterEvent);
+btnAdicionar.addEventListener('click', adicionarCompromisso);
+
+function checkEnterEvent(event) {
+    if (event.type === 'keyup')
+    {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            btnAdicionar.click();
+        }
+    }
+}
+
+function adicionarCompromisso() {
+    if (caixaTexto.value == '') {
+        alert('Digite um compromisso');
+    }
+    else {
+        criarCompromisso(caixaTexto.value);
+    }
+}
+
+function criarCompromisso(compromissoName) {
+    let listaCompromisso = document.querySelector('.task-list');
+    let compromisso = document.createElement('li');
+    
+    compromisso.innerHTML = compromissoName;
+
+    listaCompromisso.appendChild(compromisso);
+
+    caixaTexto.value = '';
+}
