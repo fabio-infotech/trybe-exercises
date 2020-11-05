@@ -34,7 +34,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 4-2: _JavaScript - Array e loop For_ :heavy_check_mark:
 - [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_ :heavy_check_mark:
 - [X] 4-4: _JavaScript - Objetos e funções_ :heavy_check_mark:
-- [X] 4-5: _[Projeto - Playground Functions](https://github.com/fabio-infotech/trybe-exercises)_ :heavy_check_mark:
+- [X] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-08-project-playground-function/pull/47)_ :heavy_check_mark:
 
 ##### Bloco 5: Introdução - JavaScript - Projetos :hourglass_flowing_sand:
 
