@@ -105,11 +105,11 @@ ul.addEventListener('mousemove', aumentaFonte);
 ul.addEventListener('mouseout', diminuiFonte);
 
 function aumentaFonte(event) {
-    event.target.style.fontSize = 'xxx-large';
+    event.target.style.fontSize = '30px';
 }
 
 function diminuiFonte(event) {
-    event.target.style.fontSize = 'medium';
+    event.target.style.fontSize = '20px';
 }
 
 // Exercício 7
@@ -144,9 +144,21 @@ divTask.addEventListener('click', selectTask);
 
 function selectTask() {
     if (divTask.className == 'task') {
-        divTask.className = 'task selected';
+        divTask.className = 'task-selected';
     }
     else {
         divTask.className = 'task';
     }    
+}
+
+// Exercício 10
+ul.addEventListener('click', setLegendColor);
+
+function setLegendColor(event) {
+    if (event.target.style.color !== document.querySelector('.task-selected').style.backgroundColor) {
+        event.target.style.color = 'rgb(119,119,119)';
+    }
+    else {
+        event.target.style.color = document.querySelector('.task-selected').style.backgroundColor;
+    }
 }
