@@ -20,27 +20,27 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 2-2: _Entendendo os comandos_ :heavy_check_mark:
 - [X] 2-3: _Internet - Entendendo como ela funciona_ :heavy_check_mark:
 
-##### Bloco 3: Introdução - HTML & CSS :hourglass_flowing_sand:
+##### Bloco 3: Introdução - HTML & CSS :heavy_check_mark:
 
 - [X] 3-1: _HTML & CSS - Estruturas de página_ :heavy_check_mark:
 - [X] 3-2: _HTML & CSS - Primeiros passos em CSS_ :heavy_check_mark:
 - [X] 3-3: _HTML & CSS - Seletores e posicionamento_ :heavy_check_mark:
 - [X] 3-4: _HTML Semântico_ :heavy_check_mark:
-- [X] 3-5: _[Projeto - HTML & CSS](https://github.com/fabio-infotech/trybe-exercises)_
+- [X] 3-5: _[Projeto - HTML & CSS](https://github.com/fabio-infotech/trybe-exercises)_ :heavy_check_mark:
 
-##### Bloco 4: Introdução - JavaScript :hourglass_flowing_sand:
+##### Bloco 4: Introdução - JavaScript :heavy_check_mark:
 
-- [X] 4-1: _JavaScript - Primeiros passos_
-- [X] 4-2: _JavaScript - Array e loop For_
-- [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
-- [X] 4-4: _JavaScript - Objetos e funções_
-- [X] 4-5: _[Projeto - Playground Functions](https://github.com/fabio-infotech/trybe-exercises)_
+- [X] 4-1: _JavaScript - Primeiros passos_ :heavy_check_mark:
+- [X] 4-2: _JavaScript - Array e loop For_ :heavy_check_mark:
+- [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_ :heavy_check_mark:
+- [X] 4-4: _JavaScript - Objetos e funções_ :heavy_check_mark:
+- [X] 4-5: _[Projeto - Playground Functions](https://github.com/fabio-infotech/trybe-exercises)_ :heavy_check_mark:
 
 ##### Bloco 5: Introdução - JavaScript - Projetos :hourglass_flowing_sand:
 
-- [X] 5-1: _JavaScript - DOM e seletores_
-- [X] 5-2: _JavaScript - Trabalhando com elementos_
-- [X] 5-3: _JavaScript - Eventos_
+- [X] 5-1: _JavaScript - DOM e seletores_ :heavy_check_mark:
+- [X] 5-2: _JavaScript - Trabalhando com elementos_ :heavy_check_mark:
+- [X] 5-3: _JavaScript - Eventos_ :heavy_check_mark:
 - [ ] 5-4: _JavaScript - Web Storage_
 - [ ] 5-5: _[Projeto - Meme Generator](https://github.com/fabio-infotech/trybe-exercises)_
 - [ ] 5-6: _[Projeto - Arte com Pixels](https://github.com/fabio-infotech/trybe-exercises)_
