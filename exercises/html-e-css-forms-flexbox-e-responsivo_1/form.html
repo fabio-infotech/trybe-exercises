@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class='curriculo-form-header'>
+        <h1>CURRÍCULO</h1>        
+    </header>
+    <form action="" method="get" class="curriculo-form">
+        <div class="form-row">
+            <div class="line-content">
+                <fieldset class="personal-data-form-row">
+                  <legend>Dados Pessoais</legend>
+                  <label for="curriculo-nome">Nome</label>
+                  <input type="text" name="nome" id="curriculo-nome" maxlength="40" required>
+                  <label for="curriculo-email">E-Mail</label>
+                  <input type="text" name="email" id="curriculo-email" maxlength="50" required>
+                  <label for="curriculo-cpf">CPF</label>
+                  <input type="text" name="cpf" id="curriculo-cpf" maxlength="11" required>
+                  <label for="curriculo-endereco">Endereço</label>
+                  <input type="text" name="endereco" id="curriculo-endereco" maxlength="200" required>
+                  <label for="curriculo-cidade">Cidade</label>
+                  <input type="text" name="cidade" id="curriculo-cidade" maxlength="28" required>
+                  <label for="curriculo-estado">Estado</label>
+                  <select name="estado" id="curriculo-estado" required></select>
+                  <br>
+                  <br>
+                  <input type="radio" name="tipo-logradouro" id="curriculo-tipo-logradouro-1" value="casa" checked required>
+                  <label for="curriculo-tipo-logradouro-1">Casa</label>
+                  <input type="radio" name="tipo-logradouro" id="curriculo-tipo-logradouro-2" value="apartamento">
+                  <label for="curriculo-tipo-logradouro-2">Apartamento</label>
+                </fieldset>
+              </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
