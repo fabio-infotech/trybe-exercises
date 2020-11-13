@@ -1,5 +1,12 @@
 // Lista de objetos
+const form = document.getElementsByTagName('form')[0];
+const body = document.getElementsByTagName('body')[0];
 const cbCurriculoEstado = document.getElementById('curriculo-estado');
+const btnCurriculoSubmit = document.getElementById('curriculo-submit');
+const txtCurriculoDataInicio = document.getElementById('curriculo-data-inicio');
+
+// Lista de eventos dos objetos
+btnCurriculoSubmit.addEventListener('click', stopDefAction);
 
 const listaEstados = [
     {uf:"AC", descricao:"Acre"}, 
@@ -51,12 +58,12 @@ function isNumber(str) {
 
 function fctValidaData(obj)
 {
-    if (obj.value.length !== 10) {
+    if (obj.length !== 10) {
         alert('Data de Início inválida');
         return false;
     }
 
-    let data = obj.value;
+    let data = obj;
     let dia = data.substring(0,2);
     let mes = data.substring(3,5);
     let ano = data.substring(6,10);
@@ -65,29 +72,54 @@ function fctValidaData(obj)
 
     if (barra1 !== '/' || barra2 !== '/') {
         alert('Data de Início com formato inválido');
-        obj.focus();
         return false;
     }
 
     if (!isNumber(dia) || !isNumber(mes) || !isNumber(ano)) {
         alert('Data de Início inválida');
-        obj.focus();
         return false;
     }
     if ((Number(dia) < 1)||(Number(dia) < 1 || Number(dia) > 30) && (mes === '04' || mes === '06' || mes === '09' || mes === '11' ) || Number(dia) > 31) {
         alert('Data de Início - Dia inválido');
-        obj.focus();
         return false;
     }
     if (Number(mes) < 0 || Number(mes) > 12) {
         alert('Data de Início - Mês inválido');
-        obj.focus();
         return false;
     }    
     if (Number(ano) < 0) {
         alert('Data de Início - Ano inválido');
-        obj.focus();
         return false;
     }    
     return true;
+}
+
+function showData(e) {
+    const showDataDiv = document.getElementById('show-data');
+    if (showDataDiv !== null) {
+        body.removeChild(showDataDiv);
+    }
+    const div = document.createElement('div');
+    div.id = 'show-data';
+    for (index = 0; index < e.target.form.length - 1; index += 1) {
+        if (e.target.form[index].value !== undefined) {
+        if (
+            e.target.form[index].type !== 'radio' ||
+            e.target.form[index].checked === true
+        ) {
+            const p = document.createElement('p');
+            p.innerHTML = `${e.target.form[index].name}: ${e.target.form[index].value}`;
+            div.appendChild(p);
+        }
+        }
+    }
+    body.appendChild(div);
+}
+
+function stopDefAction(event) {
+    event.preventDefault();
+    if (fctValidaData(txtCurriculoDataInicio.value) && form.checkValidity()) {
+        console.log(event.target.form);
+        showData(event);
+    }
 }
