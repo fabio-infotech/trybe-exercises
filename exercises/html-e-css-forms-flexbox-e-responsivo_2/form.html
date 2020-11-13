@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="Frameworks/Bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="Bibliotecas/DatePickerX/css/DatePickerX.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="node_modules/popup-validation/bin/validation.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class='curriculo-form-header'>
+        <h1>CURRÍCULO</h1>        
+    </header>
+    <form action="" method="get" id="curriculo-form" class="curriculo-form">
+        <div class="form-row">
+            <div class="line-content">
+                <fieldset class="personal-data-form-row">
+                  <legend>Dados Pessoais</legend>
+                  <label for="curriculo-nome">Nome</label>
+                  <input type="text" name="nome" id="curriculo-nome" class="validate" maxlength="40" data-validate="required">
+                  <label for="curriculo-email">E-Mail</label>
+                  <input type="text" name="email" id="curriculo-email" class="validate" maxlength="50" data-validate="required,email">
+                  <label for="curriculo-cpf">CPF</label>
+                  <input type="text" name="cpf" id="curriculo-cpf" class="validate" maxlength="11" data-validate="required">
+                  <label for="curriculo-endereco">Endereço</label>
+                  <input type="text" name="endereco" id="curriculo-endereco" class="validate" maxlength="200" data-validate="required">
+                  <label for="curriculo-cidade">Cidade</label>
+                  <input type="text" name="cidade" id="curriculo-cidade" class="validate" maxlength="28" data-validate="required">
+                  <label for="curriculo-estado">Estado</label>
+                  <select name="estado" id="curriculo-estado" class="validate" data-validate="required"></select>
+                  <br>
+                  <br>
+                  <input type="radio" name="tipo-logradouro" id="curriculo-tipo-logradouro-1" class="validate" value="casa" checked data-validate="required">
+                  <label for="curriculo-tipo-logradouro-1">Casa</label>
+                  <input type="radio" name="tipo-logradouro" id="curriculo-tipo-logradouro-2" class="validate" value="apartamento" data-validate="required">
+                  <label for="curriculo-tipo-logradouro-2">Apartamento</label>
+                </fieldset>
+              </div>
+              <div class="line-content">
+                <fieldset class="professional-data-form-row">
+                  <legend>Último Emprego</legend>
+                  <textarea name="dados-ultimo-emprego" id="curriculo-dados-ultimo-emprego" class="validate" cols="50" rows="10" maxlength="1000" data-validate="required"></textarea>
+                  <label for="curriculo-cargo">Cargo</label>
+                  <input type="text" name="cargo" id="curriculo-cargo" class="validate" maxlength="40" data-validate="required">
+                  <label for="curriculo-cargo-descricao">Descrição do Cargo</label>
+                  <input type="text" name="cargo" id="curriculo-cargo-descricao" class="validate" maxlength="200" data-validate="required">
+                  <label for="curriculo-data-inicio">Data de Início</label>
+                  <input type="text" name="data-inicio" id="curriculo-data-inicio" class="validate" data-validate="required">
+                </fieldset>
+              </div>
+              <div class="line-content">
+                <button id="curriculo-submit" type="submit">Submit</button>
+                <button type="reset" id="curriculo-limpar">Limpar</button>
+              </div>
+        </div>
+    </form>
+    <script src="Bibliotecas/DatePickerX/js/DatePickerX.min.js"></script>
+    <script src="node_modules/popup-validation/bin/validation.min.js"></script>
+    <script src="node_modules/just-validate/dist/js/just-validate.min.js"></script>
+    <script src="script.js"></script>    
+</body>
+</html>
