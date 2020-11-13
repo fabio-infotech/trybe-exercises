@@ -10,8 +10,7 @@ window.onload = function() {
     document.body.bgColor = backgroundColor;
 
     function checkEnterEvent(event) {
-        if (event.type === 'keyup')
-        {
+        if (event.type === 'keyup') {
             if (event.keyCode === 13 && event.target.id == 'background-color-input') {
                 
                 event.preventDefault();
