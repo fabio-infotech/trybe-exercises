@@ -1,14 +1,18 @@
 // Lista de objetos
 const form = document.getElementsByTagName('form')[0];
 const body = document.getElementsByTagName('body')[0];
+const txtCurriculoNome = document.getElementById('curriculo-nome');
 const cbCurriculoEstado = document.getElementById('curriculo-estado');
 const btnCurriculoSubmit = document.getElementById('curriculo-submit');
 const btnCurriculoLimpar = document.getElementById('curriculo-limpar');
 const txtCurriculoDataInicio = document.getElementById('curriculo-data-inicio');
 
 // Lista de eventos dos objetos
-btnCurriculoSubmit.addEventListener('click', stopDefAction);
+//btnCurriculoSubmit.addEventListener('click', stopDefAction);
 btnCurriculoLimpar.addEventListener('click', limparFormulario);
+
+// new window.JustValidate('.curriculo-form');
+validation.init("form");
 
 txtCurriculoDataInicio.DatePickerX.init({
     format: 'dd/mm/yyyy'
