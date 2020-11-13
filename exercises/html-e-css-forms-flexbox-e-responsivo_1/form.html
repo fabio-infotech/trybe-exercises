@@ -35,6 +35,18 @@
                   <label for="curriculo-tipo-logradouro-2">Apartamento</label>
                 </fieldset>
               </div>
+              <div class="line-content">
+                <fieldset class="professional-data-form-row">
+                  <legend>Último Emprego</legend>
+                  <textarea name="dados-ultimo-emprego" id="curriculo-dados-ultimo-emprego" cols="50" rows="10" maxlength="1000" required></textarea>
+                  <label for="curriculo-cargo">Cargo</label>
+                  <input type="text" name="cargo" id="curriculo-cargo" maxlength="40" required>
+                  <label for="curriculo-cargo-descricao">Descrição do Cargo</label>
+                  <input type="text" name="cargo" id="curriculo-cargo-descricao" maxlength="200" required>
+                  <label for="curriculo-data-inicio">Data de Início</label>
+                  <input type="text" name="data-inicio" id="curriculo-data-inicio" placeholder="dd/mm/aaaa" maxlength="10" onblur="fctValidaData(this);" required>
+                </fieldset>
+              </div>
         </div>
     </form>
     <script src="script.js"></script>

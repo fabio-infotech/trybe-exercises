@@ -31,7 +31,6 @@ const listaEstados = [
     {uf:"TO", descricao:"Tocantins"}
 ];
 
-// Popula ComboBox Estados
 function populaComboBoxEstados(listaEstados) {
     for(let estado = 0; estado < listaEstados.length; estado += 1) {
         const objEstado = listaEstados[estado];
@@ -45,3 +44,50 @@ function populaComboBoxEstados(listaEstados) {
 }
 
 populaComboBoxEstados(listaEstados);
+
+function isNumber(str) {
+    return !isNaN(str);
+}
+
+function fctValidaData(obj)
+{
+    if (obj.value.length !== 10) {
+        alert('Data de Início inválida');
+        return false;
+    }
+
+    let data = obj.value;
+    let dia = data.substring(0,2);
+    let mes = data.substring(3,5);
+    let ano = data.substring(6,10);
+    let barra1 = data.substring(2,3);
+    let barra2 = data.substring(5,6);
+
+    if (barra1 !== '/' || barra2 !== '/') {
+        alert('Data de Início com formato inválido');
+        obj.focus();
+        return false;
+    }
+
+    if (!isNumber(dia) || !isNumber(mes) || !isNumber(ano)) {
+        alert('Data de Início inválida');
+        obj.focus();
+        return false;
+    }
+    if ((Number(dia) < 1)||(Number(dia) < 1 || Number(dia) > 30) && (mes === '04' || mes === '06' || mes === '09' || mes === '11' ) || Number(dia) > 31) {
+        alert('Data de Início - Dia inválido');
+        obj.focus();
+        return false;
+    }
+    if (Number(mes) < 0 || Number(mes) > 12) {
+        alert('Data de Início - Mês inválido');
+        obj.focus();
+        return false;
+    }    
+    if (Number(ano) < 0) {
+        alert('Data de Início - Ano inválido');
+        obj.focus();
+        return false;
+    }    
+    return true;
+}
