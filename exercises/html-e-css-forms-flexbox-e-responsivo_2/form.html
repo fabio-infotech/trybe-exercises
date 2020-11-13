@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
-    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="Frameworks/Bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="Bibliotecas/DatePickerX/css/DatePickerX.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,7 +46,7 @@
                   <label for="curriculo-cargo-descricao">Descrição do Cargo</label>
                   <input type="text" name="cargo" id="curriculo-cargo-descricao" maxlength="200" required>
                   <label for="curriculo-data-inicio">Data de Início</label>
-                  <input type="text" name="data-inicio" id="curriculo-data-inicio" placeholder="dd/mm/aaaa" maxlength="10" required>
+                  <input type="text" name="data-inicio" id="curriculo-data-inicio" required>
                 </fieldset>
               </div>
               <div class="line-content">
@@ -54,6 +55,7 @@
               </div>
         </div>
     </form>
+    <script src="Bibliotecas/DatePickerX/js/DatePickerX.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

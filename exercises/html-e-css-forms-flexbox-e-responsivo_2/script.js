@@ -10,6 +10,25 @@ const txtCurriculoDataInicio = document.getElementById('curriculo-data-inicio');
 btnCurriculoSubmit.addEventListener('click', stopDefAction);
 btnCurriculoLimpar.addEventListener('click', limparFormulario);
 
+txtCurriculoDataInicio.DatePickerX.init({
+    format: 'dd/mm/yyyy'
+
+    // Options and defaults.
+    /*
+    mondayFirst      : true,
+    format           : 'yyyy/mm/dd',
+    minDate          : new Date(0, 0),
+    maxDate          : new Date(9999, 11, 31),
+    weekDayLabels    : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'St', 'Su'],
+    shortMonthLabels : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    singleMonthLabels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    todayButton      : true,
+    todayButtonLabel : 'Today',
+    clearButton      : true,
+    clearButtonLabel : 'Clear' 
+    */
+});
+
 const listaEstados = [
     {uf:"AC", descricao:"Acre"}, 
     {uf:"AL", descricao:"Alagoas"},
@@ -54,48 +73,6 @@ function populaComboBoxEstados(listaEstados) {
 
 populaComboBoxEstados(listaEstados);
 
-function isNumber(str) {
-    return !isNaN(str);
-}
-
-function fctValidaData(obj)
-{
-    if (obj.length !== 10) {
-        alert('Data de Início inválida');
-        return false;
-    }
-
-    let data = obj;
-    let dia = data.substring(0,2);
-    let mes = data.substring(3,5);
-    let ano = data.substring(6,10);
-    let barra1 = data.substring(2,3);
-    let barra2 = data.substring(5,6);
-
-    if (barra1 !== '/' || barra2 !== '/') {
-        alert('Data de Início com formato inválido');
-        return false;
-    }
-
-    if (!isNumber(dia) || !isNumber(mes) || !isNumber(ano)) {
-        alert('Data de Início inválida');
-        return false;
-    }
-    if ((Number(dia) < 1)||(Number(dia) < 1 || Number(dia) > 30) && (mes === '04' || mes === '06' || mes === '09' || mes === '11' ) || Number(dia) > 31) {
-        alert('Data de Início - Dia inválido');
-        return false;
-    }
-    if (Number(mes) < 0 || Number(mes) > 12) {
-        alert('Data de Início - Mês inválido');
-        return false;
-    }    
-    if (Number(ano) < 0) {
-        alert('Data de Início - Ano inválido');
-        return false;
-    }    
-    return true;
-}
-
 function showData(e) {
     const showDataDiv = document.getElementById('show-data');
     if (showDataDiv !== null) {
@@ -120,7 +97,7 @@ function showData(e) {
 
 function stopDefAction(event) {
     event.preventDefault();
-    if (fctValidaData(txtCurriculoDataInicio.value) && form.checkValidity()) {
+    if (form.checkValidity()) {
         console.log(event.target.form);
         showData(event);
     } else {
