@@ -3,10 +3,12 @@ const form = document.getElementsByTagName('form')[0];
 const body = document.getElementsByTagName('body')[0];
 const cbCurriculoEstado = document.getElementById('curriculo-estado');
 const btnCurriculoSubmit = document.getElementById('curriculo-submit');
+const btnCurriculoLimpar = document.getElementById('curriculo-limpar');
 const txtCurriculoDataInicio = document.getElementById('curriculo-data-inicio');
 
 // Lista de eventos dos objetos
 btnCurriculoSubmit.addEventListener('click', stopDefAction);
+btnCurriculoLimpar.addEventListener('click', limparFormulario);
 
 const listaEstados = [
     {uf:"AC", descricao:"Acre"}, 
@@ -121,5 +123,14 @@ function stopDefAction(event) {
     if (fctValidaData(txtCurriculoDataInicio.value) && form.checkValidity()) {
         console.log(event.target.form);
         showData(event);
+    } else {
+        window.alert('Dados inválidos!');
     }
+}
+
+function limparFormulario() {
+  const showDataDiv = document.getElementById('show-data');
+  if (showDataDiv !== null) {
+    body.removeChild(showDataDiv);
+  }
 }
