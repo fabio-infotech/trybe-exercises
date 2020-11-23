@@ -1,5 +1,10 @@
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+const longestWord = (frase) => {let big = ''; 
+  frase.split(' ').forEach(word => {   
+    if (word.trim().length > big.length) {
+      big = word.trim();
+    }
+  });
+  return big;
+}
 
-oddsAndEvens.sort((a, b) => a - b);
-
-console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`);
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")) // retorna 'aconteceu'
