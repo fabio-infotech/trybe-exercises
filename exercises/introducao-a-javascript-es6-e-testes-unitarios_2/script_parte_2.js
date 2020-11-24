@@ -34,3 +34,8 @@ listKeyObject(lesson1);
 const lengthKeyObject = (object) => console.log(Object.keys(object).length);
 
 lengthKeyObject(lesson1);
+
+// Requisito 4
+const listValuesObject = (object) => console.log(Object.values(object));
+
+listValuesObject(lesson1);
