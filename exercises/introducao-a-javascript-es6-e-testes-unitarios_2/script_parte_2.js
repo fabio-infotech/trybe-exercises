@@ -39,3 +39,8 @@ lengthKeyObject(lesson1);
 const listValuesObject = (object) => console.log(Object.values(object));
 
 listValuesObject(lesson1);
+
+// Requisito 5
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+
+console.log(allLessons);
