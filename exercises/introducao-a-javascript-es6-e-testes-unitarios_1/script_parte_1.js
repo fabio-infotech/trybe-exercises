@@ -1,3 +1,4 @@
+// Requisit 1
 const testingScope = (escopo) => { 
   if (escopo === true) { 
     let ifScope = `Não devo ser utilizada fora do meu escopo (if) ótimo, fui utilizada no escopo !`;    
@@ -10,6 +11,7 @@ const testingScope = (escopo) => {
 
 console.log(testingScope(true));
 
+// Requisito 2
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
 oddsAndEvens.sort((a, b) => a - b);
