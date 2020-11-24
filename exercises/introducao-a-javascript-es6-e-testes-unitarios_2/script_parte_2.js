@@ -44,3 +44,14 @@ listValuesObject(lesson1);
 const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 
 console.log(allLessons);
+
+// Requisito 6
+const totalEstudantes = () => {
+  let total = 0;
+  for (let object in allLessons) {
+    total += allLessons[object].numeroEstudantes;
+  }
+  return total;
+}
+
+console.log(totalEstudantes());
