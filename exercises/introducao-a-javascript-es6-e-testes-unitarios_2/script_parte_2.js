@@ -18,8 +18,14 @@ const lesson3 = {
   turno: 'noite',
 };
 
+// Requisito 1
 const alterLesson2 = (lesson2, key, value) => lesson2[key] = value;
 
 alterLesson2(lesson2, 'turno', 'manhã')
 
 console.log(lesson2);
+
+// Requisito 2
+const listKeyObject = (object) => console.log(Object.keys(object));
+
+listKeyObject(lesson1);
