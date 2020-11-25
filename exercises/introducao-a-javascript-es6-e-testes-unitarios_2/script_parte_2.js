@@ -55,3 +55,19 @@ const totalEstudantes = () => {
 }
 
 console.log(totalEstudantes());
+
+// Requisito 7
+const getValueByNumber = (obj, key) => {
+  const pairKeyValue = Object.entries(lesson1);
+  return pairKeyValue[key][1];
+}
+
+console.log(getValueByNumber(lesson1, 0));
+
+// Requisito 8
+const verifyPair = (object, key, value) => object.hasOwnProperty(key) && object[key] === value;
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
