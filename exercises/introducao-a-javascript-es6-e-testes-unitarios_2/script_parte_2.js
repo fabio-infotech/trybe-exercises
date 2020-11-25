@@ -71,3 +71,17 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+// Requisito Bonus 1
+const totalEstudantesAssistiramAulaMatematica = (allLessonsParam, key, value) => {
+  let total = 0;
+  for (let object in allLessonsParam) {
+    //allLessons[object].numeroEstudantes
+    if (allLessons[object].hasOwnProperty(key) && allLessons[object][key] === value) {
+      total += allLessonsParam[object].numeroEstudantes;
+    }
+  }
+  return total;
+}
+
+console.log(totalEstudantesAssistiramAulaMatematica(allLessons, 'materia', 'Matemática'));

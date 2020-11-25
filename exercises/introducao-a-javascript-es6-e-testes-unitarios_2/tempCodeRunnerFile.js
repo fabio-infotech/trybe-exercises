@@ -46,7 +46,36 @@ const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
 console.log(allLessons);
 
 // Requisito 6
+const totalEstudantes = () => {
+  let total = 0;
+  for (let object in allLessons) {
+    total += allLessons[object].numeroEstudantes;
+  }
+  return total;
+}
 
-const sumValues = (obj) => Object.keys(obj).reduce((acc, value) => acc + obj[value], 0);
+console.log(totalEstudantes());
 
-console.log(sumValues(allLessons));
+// Requisito 7
+const getValueByNumber = (obj, key) => {
+  const pairKeyValue = Object.entries(lesson1);
+  return pairKeyValue[key][1];
+}
+
+console.log(getValueByNumber(lesson1, 0));
+
+// Requisito 8
+const verifyPair = (object, key, value) => object.hasOwnProperty(key) && object[key] === value;
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
+
+function checkNested2(obj, level,  ...rest) {
+  if (obj === undefined) return false
+  if (rest.length == 0 && obj.hasOwnProperty(level)) return true
+  return checkNested2(obj[level], ...rest)
+}
+
+console.log(checkNested2(allLessons, 'lesson3')); // 'level3'
