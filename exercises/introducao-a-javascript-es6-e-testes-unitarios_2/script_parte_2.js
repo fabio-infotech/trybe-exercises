@@ -19,7 +19,7 @@ const lesson3 = {
 };
 
 // Requisito 1
-const alterLesson2 = (lesson2, key, value) => lesson2[key] = value;
+const alterLesson2 = (object, key, value) => object[key] = value;
 
 alterLesson2(lesson2, 'turno', 'manhã')
 
@@ -48,8 +48,8 @@ console.log(allLessons);
 // Requisito 6
 const totalEstudantes = () => {
   let total = 0;
-  for (let object in allLessons) {
-    total += allLessons[object].numeroEstudantes;
+  for (let objLesson in allLessons) {
+    total += allLessons[objLesson].numeroEstudantes;
   }
   return total;
 }
@@ -57,8 +57,8 @@ const totalEstudantes = () => {
 console.log(totalEstudantes());
 
 // Requisito 7
-const getValueByNumber = (obj, key) => {
-  const pairKeyValue = Object.entries(lesson1);
+const getValueByNumber = (object, key) => {
+  const pairKeyValue = Object.entries(object);
   return pairKeyValue[key][1];
 }
 
@@ -75,13 +75,33 @@ console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Requisito Bonus 1
 const totalEstudantesAssistiramAulaMatematica = (allLessonsParam, key, value) => {
   let total = 0;
-  for (let object in allLessonsParam) {
-    //allLessons[object].numeroEstudantes
-    if (allLessons[object].hasOwnProperty(key) && allLessons[object][key] === value) {
-      total += allLessonsParam[object].numeroEstudantes;
+  for (let objLesson in allLessonsParam) {
+    if (allLessons[objLesson].hasOwnProperty(key) && allLessons[objLesson][key] === value) {
+      total += allLessonsParam[objLesson].numeroEstudantes;
     }
   }
   return total;
 }
 
 console.log(totalEstudantesAssistiramAulaMatematica(allLessons, 'materia', 'Matemática'));
+
+//Requisito Bonus 2
+const createReport = (allLessonsParam, value) => {
+  const report = {
+    professor: '',
+    aulas: [],
+    numeroEstudantes: 0    
+  };
+
+  for (let objLesson in allLessonsParam) {
+    if (allLessons[objLesson]['professor'] === value) {
+      report.professor = allLessonsParam[objLesson].professor;
+      report.aulas.push(allLessonsParam[objLesson].materia);
+      report.numeroEstudantes += allLessonsParam[objLesson].numeroEstudantes;
+    }
+  }
+
+  return report;
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
