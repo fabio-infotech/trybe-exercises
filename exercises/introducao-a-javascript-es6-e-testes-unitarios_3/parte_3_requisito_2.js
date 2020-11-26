@@ -26,7 +26,5 @@ const parameter = 'Dayane';
 const result = 'D1y2n3';
 const output = removeVowels(parameter);
 
-// console.log(output);
-
 assert.strictEqual(typeof removeVowels, 'function');
 assert.strictEqual(output, result);
