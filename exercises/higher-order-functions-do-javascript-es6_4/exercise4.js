@@ -31,6 +31,8 @@ const people = [
 ];
 
 // escreva filterPeople abaixo
+const burnIn20Century = year => year > 1900 && year <= 2000;
+const filterPeople = (array) => array.filter(({nationality, bornIn}) => nationality === 'Australian' && burnIn20Century(bornIn));
 
 const filteredPeople = filterPeople(people);
 
