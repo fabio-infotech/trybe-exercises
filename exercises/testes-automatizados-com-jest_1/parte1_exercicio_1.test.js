@@ -9,4 +9,8 @@ describe('Exercícios de Testes Unitário 1-5', () => {
   test('Teste se o retorno de sum(4, 5) é 9', () => {
     expect(sum(4, 5)).toBe(9);
   });
+  // Exercício 3
+  test('TTeste se o retorno de sum(0, 0) é 0', () => {
+    expect(sum(0, 0)).toBe(0);
+  });
 });
