@@ -15,4 +15,8 @@ describe('Exercícios de Testes Unitário 2', () => {
     myRemove(arr, 1);
     expect(arr).toEqual([1, 2, 3, 4]);
   });
+  // Exercício 2.6
+  test('Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado', () => {
+    expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
 });
