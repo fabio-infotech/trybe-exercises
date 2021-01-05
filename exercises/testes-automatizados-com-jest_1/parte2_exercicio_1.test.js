@@ -40,4 +40,11 @@ describe('Testa a função encode e decode', () => {
   it('converte apenas o número 5 na vogal u', () => {
     expect(decode('n5')).toEqual('nu');
   });
+  // Exercício 1.6
+  it('Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(encode('trybe').length).toEqual(5);;
+  });
+  it('Teste se a string que é retornada pelas funções têm o mesmo número de caracteres que a string passada como parâmetro', () => {
+    expect(decode('trybe').length).toEqual(5);
+  });
 });
