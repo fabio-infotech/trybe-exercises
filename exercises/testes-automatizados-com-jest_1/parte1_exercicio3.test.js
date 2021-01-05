@@ -11,6 +11,12 @@ describe('Exercícios de Testes Unitário 3', () => {
   });
   // Exercício 3.6
   test('Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações', () => {
+    const arr = [1, 2, 3, 4];
+    myRemoveWithoutCopy(arr, 1);
+    expect(arr).toEqual([2, 3, 4]);
+  });
+  // Exercício 3.7
+  test('Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado', () => {
     expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
   });
 });
