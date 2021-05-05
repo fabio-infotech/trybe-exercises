@@ -1,0 +1,1 @@
+// Remova o último elemento do array category do filme Batman

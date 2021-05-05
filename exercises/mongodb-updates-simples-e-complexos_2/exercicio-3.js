@@ -1,0 +1,1 @@
+// Remova a categoria "action" do filme Batman
