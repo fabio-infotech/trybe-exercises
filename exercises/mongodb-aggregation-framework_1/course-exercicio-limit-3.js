@@ -1,0 +1,1 @@
+// Selecione três transações com o valor acima de 1000
