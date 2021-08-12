@@ -13,4 +13,4 @@ def draw_triangle(num):
    for row in range(1, num + 1):
       print(row * '*')
 
-print(draw_triangle(5))
+draw_triangle(5)
